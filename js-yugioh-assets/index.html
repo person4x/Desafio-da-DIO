@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Yu-Gi-Oh Jo-Ken-Po</title>
+  <link rel="stylesheet" href="src/styles/reset.css">
+  <link rel="stylesheet" href="src/styles/containers_and_frames.css">
+  <link rel="stylesheet" href="src/styles/buttons.css">
+  <link rel="stylesheet" href="src/styles/main.css">
+</head>
+<body>
+  <div class="video-bg">
+    <video id="bgVideo" src="src/assets/video/yugi.mp4" autoplay muted loop playsinline></video>
+    <div class="overlay"></div>
+  </div>
+
+  <main class="game-root">
+    <header class="scoreboard">
+      <h1>Yu-Gi-Oh Jo-Ken-Po</h1>
+      <div class="scores">
+        <div>Vitórias: <span id="wins">0</span></div>
+        <div>Derrotas: <span id="losses">0</span></div>
+        <div>Empates: <span id="ties">0</span></div>
+      </div>
+    </header>
+
+    <section class="cards-area">
+      <h2>Suas cartas</h2>
+      <div id="cards" class="cards"></div>
+    </section>
+
+    <section class="computer-area">
+      <h2>Carta do Computador</h2>
+      <div id="computer-card" class="card"></div>
+    </section>
+
+    <section class="result-area">
+      <div id="result" class="result">Escolha uma carta</div>
+    </section>
+  </main>
+
+  <audio id="s-win" src="src/assets/audios/win.wav" preload="auto"></audio>
+  <audio id="s-lose" src="src/assets/audios/lose.wav" preload="auto"></audio>
+  <audio id="bg-music" src="src/assets/audios/egyptian_duel.mp3" autoplay loop></audio>
+
+  <script src="src/scripts/engine.js"></script>
+</body>
+</html>

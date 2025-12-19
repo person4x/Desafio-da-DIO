@@ -1,0 +1,27 @@
+html,body{height:100%;margin:0;font-family:Arial,Helvetica,sans-serif;color:#fff}
+.video-bg{position:fixed;inset:0;overflow:hidden;z-index:-2}
+.video-bg video{width:100%;height:100%;object-fit:cover;display:block}
+.video-bg .overlay{position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0.25),rgba(0,0,0,0.6));z-index:1}
+
+.game-root{position:relative;z-index:2;min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;padding:24px}
+.scoreboard{display:flex;align-items:center;gap:24px;background:rgba(0,0,0,0.35);padding:12px 20px;border-radius:10px;backdrop-filter:blur(4px)}
+.scoreboard h1{margin:0;font-size:20px}
+.scoreboard .scores{display:flex;gap:12px;font-weight:700}
+
+.cards-area,.computer-area{margin-top:28px;width:100%;max-width:980px;text-align:center}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:18px}
+.card{background:rgba(255,255,255,0.06);border:2px solid rgba(255,255,255,0.08);border-radius:12px;padding:12px;display:flex;flex-direction:column;align-items:center;cursor:pointer;transition:transform .12s,box-shadow .12s}
+.card img{width:100%;height:140px;object-fit:contain;border-radius:6px}
+.card .name{margin-top:8px;font-weight:700;text-align:center}
+.card .attr{margin-top:6px;font-size:13px;padding:4px 8px;border-radius:8px;background:rgba(0,0,0,0.25)}
+.card:hover{transform:translateY(-6px);box-shadow:0 8px 24px rgba(0,0,0,0.45)}
+
+.result-area{margin-top:20px}
+.result{background:rgba(0,0,0,0.45);padding:12px 18px;border-radius:8px;font-size:18px}
+
+@media (max-width:520px){.card img{height:110px}}
+
+.card.chosen{outline:3px solid rgba(80,200,120,0.9);transform:translateY(-8px)}
+.card.enemy{outline:3px solid rgba(220,80,80,0.85)}
+.card.win{box-shadow:0 14px 40px rgba(80,200,120,0.18);border-color:rgba(80,200,120,0.6)}
+.card.lose{box-shadow:0 10px 30px rgba(220,80,80,0.18);border-color:rgba(220,80,80,0.5)}
